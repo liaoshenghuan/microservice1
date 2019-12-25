@@ -9,9 +9,9 @@
 		<relativePath>../hello-spring-cloud-dependencies/pom.xml</relativePath>
 	</parent>
 
-	<artifactId>hello-spring-cloud-zuul</artifactId>
+	<artifactId>hello-spring-cloud-config</artifactId>
 	<packaging>jar</packaging>
-	<name>hello-spring-cloud-zuul</name>
+	<name>hello-spring-cloud-config</name>
 
 	<dependencies>
 		<!-- Spring Boot begin-->
@@ -19,7 +19,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<!--Spring Boot end-->
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
@@ -33,17 +33,19 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 		</dependency>
+		<!--Spring Boot end-->
 
 		<!--Spring cloud begin-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-server</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-		</dependency>
 		<!-- Spring cloud end-->
 
 	</dependencies>
@@ -54,7 +56,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.funtl.hello.spring.cloud.zuul.ZuulApplication</mainClass>
+					<mainClass>com.funtl.hello.spring.cloud.config.ConfigApplication</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
