@@ -8,18 +8,26 @@ spring:
     encoding: UTF-8
     servlet:
       content-type: text/html
+  # config client 云配置
+  cloud:
+    config:
+      uri: http://localhost:8888
+      name: web-admin-feign
+      label: devlop
+      profile: dev  # 加载dev文件
 
-server:
-  port: 8880
-
-# feign 自带熔断器，默认是关闭的，需要再配置打开，配置如下
-feign:
-  hystrix:
-    enabled: true
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8886/eureka/
+# 以下为本地配置，启用云配置后删除
+#server:
+#  port: 8880
+#
+## feign 自带熔断器，默认是关闭的，需要再配置打开，配置如下
+#feign:
+#  hystrix:
+#    enabled: true
+#
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8886/eureka/
 
 

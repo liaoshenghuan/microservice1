@@ -19,7 +19,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableDiscoveryClient//注册到Eureka服务上
 @EnableHystrixDashboard//此注解用于开启熔断器仪表盘功能。
 /**
-* 小知识：SpringBott2.X，使用仪表盘注解后，需要手动写个Servlet
+* 小知识：SpringBoot2.X，使用仪表盘注解后，需要手动写个Servlet
 */
 public class WebAdminFeignApplication {
 
