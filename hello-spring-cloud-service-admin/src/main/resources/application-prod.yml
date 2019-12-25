@@ -7,7 +7,7 @@ spring:
       uri: http://localhost:8888
       name: service-admin
       label: devlop
-      profile: dev  # 加载dev文件
+      profile: prod  # 加载dev文件
 
 
 #server:
