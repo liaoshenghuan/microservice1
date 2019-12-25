@@ -19,7 +19,9 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<!-- spring setting -->
-		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+<!--		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>-->
+		<spring-cloud.version>Greenwich.RC2</spring-cloud.version>
+
 	</properties>
 <dependencyManagement>
 	<dependencies>
@@ -169,8 +171,12 @@
 			<artifactId>sentinel-core</artifactId>
 			<version>1.7.0</version>
 		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
 
-	</dependencies>
+    </dependencies>
 
 	<repositories>
 		<repository>
