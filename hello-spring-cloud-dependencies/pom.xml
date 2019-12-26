@@ -21,6 +21,7 @@
 		<!-- spring setting -->
 <!--		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>-->
 		<spring-cloud.version>Greenwich.RC2</spring-cloud.version>
+		<zipkin.version>2.10.1</zipkin.version>
 
 	</properties>
 <dependencyManagement>
@@ -32,6 +33,29 @@
 			<type>pom</type>
 			<scope>import</scope>
 		</dependency>
+
+		<!--服务链路追踪依赖 start -->
+		<dependency>
+			<groupId>io.zipkin.java</groupId>
+			<artifactId>zipkin</artifactId>
+			<version>${zipkin.version}</version>
+		</dependency>
+
+		<!-- 服务-->
+		<dependency>
+			<groupId>io.zipkin.java</groupId>
+			<artifactId>zipkin-server</artifactId>
+			<version>${zipkin.version}</version>
+		</dependency>
+
+		<!--自动装配-->
+		<dependency>
+			<groupId>io.zipkin.java</groupId>
+			<artifactId>zipkin-autoconfiguer-ui</artifactId>
+			<version>${zipkin.version}</version>
+		</dependency>
+
+		<!--服务链路追踪依赖 end -->
 	</dependencies>
 </dependencyManagement>
 

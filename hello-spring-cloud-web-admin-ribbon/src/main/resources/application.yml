@@ -1,13 +1,14 @@
 spring:
-  application:
-    name: hello-spring-cloud-web-admin-ribbon
-  # 用来模拟UI层配置
-  thymeleaf:
-    cache: false
-    mode: LEGACYHTML5
-    encoding: UTF-8
-    servlet:
-      content-type: text/html
+#  application:
+#    name: hello-spring-cloud-web-admin-ribbon
+#  # 用来模拟UI层配置
+#  thymeleaf:
+#    cache: false
+#    mode: LEGACYHTML5
+#    encoding: UTF-8
+#    servlet:
+#      content-type: text/html
+#
   # config client 云配置
   cloud:
     config:

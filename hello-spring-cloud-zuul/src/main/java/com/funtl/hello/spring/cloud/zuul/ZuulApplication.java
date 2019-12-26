@@ -4,6 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import org.springframework.context.annotation.EnableMBeanExport;
+import org.springframework.jmx.support.RegistrationPolicy;
 
 /**
  * 名称: ZuulApplication
@@ -18,6 +20,8 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableZuulProxy
+//解决jmx重复注册bean的问题
+//@EnableMBeanExport(registration = RegistrationPolicy.IGNORE_EXISTING)
 public class ZuulApplication {
     public static void main(String[] args) {
         SpringApplication.run(ZuulApplication.class,args);
