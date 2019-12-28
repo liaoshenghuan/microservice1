@@ -21,6 +21,7 @@
 		<!-- spring setting -->
 <!--		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>-->
 		<spring-cloud.version>Greenwich.RC2</spring-cloud.version>
+		<spring-boot-admin.version>2.1.2</spring-boot-admin.version>
 		<zipkin.version>2.10.1</zipkin.version>
 
 	</properties>
@@ -53,6 +54,20 @@
 			<groupId>io.zipkin.java</groupId>
 			<artifactId>zipkin-autoconfigure-ui</artifactId>
 			<version>${zipkin.version}</version>
+		</dependency>
+
+		<!-- 服务监控之服务端依赖 -->
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-server</artifactId>
+			<version>${spring-boot-admin.version}</version>
+		</dependency>
+
+		<!-- 服务监控之客户端依赖 -->
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-client</artifactId>
+			<version>${spring-boot-admin.version}</version>
 		</dependency>
 
 		<!--服务链路追踪依赖 end -->

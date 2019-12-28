@@ -9,9 +9,9 @@
         <relativePath>../hello-spring-cloud-dependencies/pom.xml</relativePath>
     </parent>
 
-    <artifactId>hello-spring-cloud-zipkin</artifactId>
+    <artifactId>hello.spring.cloud.admin</artifactId>
     <packaging>jar</packaging>
-    <name>hello-spring-cloud-zipkin</name>
+    <name>hello.spring.cloud.admin</name>
 
     <dependencies>
         <!-- Spring Boot begin-->
@@ -34,6 +34,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
 
+
         <!--Spring Boot end-->
 
         <!--Spring cloud begin-->
@@ -42,22 +43,10 @@
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
 
-        <!--服务链路追踪依赖 start -->
+        <!-- 服务追踪 -->
         <dependency>
-            <groupId>io.zipkin.java</groupId>
-            <artifactId>zipkin</artifactId>
-        </dependency>
-
-        <!-- 服务-->
-        <dependency>
-            <groupId>io.zipkin.java</groupId>
-            <artifactId>zipkin-server</artifactId>
-        </dependency>
-
-        <!--自动装配-->
-        <dependency>
-            <groupId>io.zipkin.java</groupId>
-            <artifactId>zipkin-autoconfigure-ui</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
 
         <!-- 把本地配置移植到云配置上做管理 -->
@@ -68,7 +57,7 @@
 
         <!-- Spring cloud end-->
 
-        <!-- 服务监控之客户端配置 start-->
+        <!-- 服务监控之服务端配置 start-->
         <dependency>
             <groupId>org.jolokia</groupId>
             <artifactId>jolokia-core</artifactId>
@@ -76,9 +65,9 @@
 
         <dependency>
             <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <artifactId>spring-boot-admin-starter-server</artifactId>
         </dependency>
-        <!-- 服务监控之客户端配置 end-->
+        <!-- 服务监控之服务端配置 end-->
 
     </dependencies>
 
@@ -88,7 +77,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.funtl.hello.spring.cloud.zipkin.ZipkinApplication</mainClass>
+                    <mainClass>com.funtl.hello.spring.cloud.admin.AdminApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
