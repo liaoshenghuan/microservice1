@@ -7,7 +7,7 @@ spring:
       uri: http://localhost:8888
       name: zuul
       label: devlop
-      profile: dev  # 加载dev文件
+      profile: prod  # 加载dev文件
 
   #解决The bean 'characterEncodingFilter', defined in class path resource....
 #  main:

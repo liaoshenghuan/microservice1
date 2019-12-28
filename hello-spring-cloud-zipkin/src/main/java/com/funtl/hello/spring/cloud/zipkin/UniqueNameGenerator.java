@@ -16,7 +16,7 @@ public class UniqueNameGenerator extends AnnotationBeanNameGenerator {
 
     @Override
     public String generateBeanName(BeanDefinition definition, BeanDefinitionRegistry registry){
-        //全限定类名
+        //全局限定类名
         String beanName = definition.getBeanClassName();
         return beanName;
     }
