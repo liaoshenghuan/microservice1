@@ -17,7 +17,7 @@ import zipkin.server.internal.EnableZipkinServer;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableZipkinServer
-@ComponentScan(nameGenerator = UniqueNameGenerator.class)
+//@ComponentScan(nameGenerator = UniqueNameGenerator.class)
 public class ZipkinApplication {
     public static void main(String[] args) {
         SpringApplication.run(ZipkinApplication.class,args);

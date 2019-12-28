@@ -9,6 +9,10 @@ spring:
 #      label: devlop
 #      profile: dev  # 加载dev文件
 
+  #解决The bean 'characterEncodingFilter', defined in class path resource....
+  main:
+    allow-bean-definition-overriding: true
+
 server:
   port: 9411 # 默认端口
 
@@ -17,6 +21,7 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8887/eureka/
 
+#解决IllegalArgumentException: Prometheus requires that all......
 management:
   metrics:
     web:
