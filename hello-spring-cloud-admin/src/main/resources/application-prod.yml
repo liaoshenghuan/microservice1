@@ -4,7 +4,7 @@ spring:
 #
 #    # 服务追踪配置
 #    zipkin:
-#      base-url: http://localhost:9411
+#      base-url: http://localhost:9410
 
   # config client 云配置
   cloud:
