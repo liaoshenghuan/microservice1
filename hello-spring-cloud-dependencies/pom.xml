@@ -51,7 +51,7 @@
 		<!--自动装配-->
 		<dependency>
 			<groupId>io.zipkin.java</groupId>
-			<artifactId>zipkin-autoconfiguer-ui</artifactId>
+			<artifactId>zipkin-autoconfigure-ui</artifactId>
 			<version>${zipkin.version}</version>
 		</dependency>
 
