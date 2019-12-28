@@ -10,7 +10,7 @@ spring:
   cloud:
     config:
       uri: http://localhost:8888
-      name: web-admin-feign
+      name: admin
       label: devlop
       profile: dev  # 加载dev文件
 

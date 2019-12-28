@@ -5,7 +5,7 @@ spring:
   cloud:
     config:
       uri: http://localhost:8888
-      name: zuul
+      name: zipkin
       label: devlop
       profile: prod  # 加载dev文件
 
