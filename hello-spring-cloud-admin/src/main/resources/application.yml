@@ -23,11 +23,11 @@ spring:
 #      defaultZone: http://localhost:8887/eureka/
 #
 ## 健康检查
-#management:
-#  endpoint:
-#    health:
-#      show-details: always
-#  endpoints:
-#    web:
-#      exposure:
-#        include: ["health","info"]
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: ["health","info"]
