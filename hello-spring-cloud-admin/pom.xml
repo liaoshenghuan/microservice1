@@ -1,86 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>com.funtl</groupId>
-        <artifactId>hello-spring-cloud-dependencies</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../hello-spring-cloud-dependencies/pom.xml</relativePath>
-    </parent>
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.funtl</groupId>
+		<artifactId>hello-spring-cloud-dependencies</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../hello-spring-cloud-dependencies/pom.xml</relativePath>
+	</parent>
 
-    <artifactId>hello-spring-cloud-admin</artifactId>
-    <packaging>jar</packaging>
-    <name>hello-spring-cloud-admin</name>
+	<artifactId>hello-spring-cloud-admin</artifactId>
+	<packaging>jar</packaging>
+	<name>hello-spring-cloud-admin</name>
 
-    <dependencies>
-        <!-- Spring Boot begin-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+	<dependencies>
+		<!-- Spring Boot begin-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-        </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+		</dependency>
+		<!--Spring Boot end-->
 
+		<!--Spring cloud begin-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+		</dependency>
 
-        <!--Spring Boot end-->
+		<!-- 服务追踪 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
+		</dependency>
 
-        <!--Spring cloud begin-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-        </dependency>
+		<!-- 把本地配置移植到云配置上做管理 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+		<!-- Spring cloud end-->
 
-        <!-- 服务追踪 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
-        </dependency>
+		<!-- 服务监控之客户端配置 start-->
+		<dependency>
+			<groupId>org.jolokia</groupId>
+			<artifactId>jolokia-core</artifactId>
+		</dependency>
 
-        <!-- 把本地配置移植到云配置上做管理 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
-        </dependency>
+		<dependency>
+		<groupId>de.codecentric</groupId>
+		<artifactId>spring-boot-admin-starter-server</artifactId>
+	</dependency>
+		<!-- 服务监控之客户端配置 end-->
 
-        <!-- Spring cloud end-->
+	</dependencies>
 
-        <!-- 服务监控之服务端配置 start-->
-        <dependency>
-            <groupId>org.jolokia</groupId>
-            <artifactId>jolokia-core</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-server</artifactId>
-        </dependency>
-        <!-- 服务监控之服务端配置 end-->
-
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.funtl.hello.spring.cloud.admin.AdminApplication</mainClass>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.funtl.hello.spring.cloud.admin.AdminApplication</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
