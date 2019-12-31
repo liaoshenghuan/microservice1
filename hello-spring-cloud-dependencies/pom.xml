@@ -23,6 +23,8 @@
 		<spring-cloud.version>Greenwich.RC2</spring-cloud.version>
 		<spring-boot-admin.version>2.1.2</spring-boot-admin.version>
 		<zipkin.version>2.10.1</zipkin.version>
+		<hutool.version>5.1.0</hutool.version>
+		<javax-servlet.version>3.1.0</javax-servlet.version>
 
 	</properties>
 <dependencyManagement>
@@ -71,6 +73,18 @@
 		</dependency>
 
 		<!--服务链路追踪依赖 end -->
+		<!-- 糊涂工具包-->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>${hutool.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${javax-servlet.version}</version>
+		</dependency>
 	</dependencies>
 </dependencyManagement>
 
